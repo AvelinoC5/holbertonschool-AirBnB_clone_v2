@@ -71,6 +71,3 @@ class DBStorage:
         """closing the session"""
         self. reload()
         self.__session.close()
-
-
-Footer
