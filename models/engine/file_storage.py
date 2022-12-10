@@ -24,7 +24,7 @@ class FileStorage:
     def delete(self, obj=None):
         """ Delete functions"""
         if obj is not None:
-            key = obj.__class__.__name__ + '.' + obj.id
+            key = obj.__class__.__name__ + "." + obj.id
             del (FileStorage.__objects[key])
 
     def new(self, obj):
