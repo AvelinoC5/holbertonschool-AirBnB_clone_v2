@@ -14,7 +14,7 @@ class FileStorage:
             return FileStorage.__objects
 
         new_dict = {}
-        name_cls = cls._name_
+        name_cls = cls.__name__
         key = FileStorage.__objects.keys()
         for i in key:
             if name_cls == i.split(".")[0]:
