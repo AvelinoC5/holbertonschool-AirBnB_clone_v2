@@ -18,7 +18,7 @@ class DBStorage:
 
     __engine = None
     __session = None
-    all_classes = ["State", "City", "User", "Place", "Review"]
+    all_classes = ["State", "City"]
 
     def __init__(self):
         """init"""
@@ -71,4 +71,6 @@ class DBStorage:
         """closing the session"""
         self. reload()
         self.__session.close()
+
+
 Footer
