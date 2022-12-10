@@ -13,13 +13,13 @@ class FileStorage:
         if cls is None:
             return FileStorage.__objects
 
-        dict_new = {}
-        name_class = cls.__name__
-        key = FileStorage.__objects.key()
+        new_dict = {}
+        name_cls = cls._name_
+        key = FileStorage.__objects.keys()
         for i in key:
-            if name_class == i.split(".")[0]:
-                dict_new[i] = FileStorage.__objects[i]
-        return dict_new
+            if name_cls == i.split(".")[0]:
+                new_dict[i] = FileStorage.__objects[i]
+        return new_dict
 
     def delete(self, obj=None):
         """ Delete functions"""
