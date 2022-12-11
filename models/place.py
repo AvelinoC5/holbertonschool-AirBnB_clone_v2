@@ -28,3 +28,12 @@ class Place(BaseModel, Base):
     def __init__(self, *args, **kwargs):
         """Inicializations"""
         super().__init__(*args, **kwargs)
+
+    if models.storage_type != "db":
+        @property
+        def reviews(self):
+            review_list = []
+            for review in list(models.storage.all(Review).values()):
+                if review.place_id == self.id:
+                    review_list.append(review)
+            return review_list
