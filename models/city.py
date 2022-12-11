@@ -14,7 +14,7 @@ class City(BaseModel, Base):
     __tablename__ = 'cities'
     name = Column(String(128), nullable=False)
     state_id = Column(String(128), ForeignKey('states.id'), nullable=False)
-    # places = relationship("Place", backref="cities", cascade='delete')
+    places = relationship("Place", backref="cities", cascade='delete')
 
     def __init__(self, *args, **kwargs):
         """Initialization inheroted"""
