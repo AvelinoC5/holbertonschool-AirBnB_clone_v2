@@ -15,7 +15,7 @@ def index():
 @app.route('/hbnb')
 def hbnb():
     """two page"""
-    return "HBNB!"
+    return "HBNB"
 
 
 if __name__ == "__main__":
