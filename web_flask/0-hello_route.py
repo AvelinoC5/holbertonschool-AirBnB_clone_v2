@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""using flask Framework for routing""""
+"""Flask web application"""
 from flask import Flask
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@app.route("/")
+@app.route('/')
 def index():
-    """show the home page""""
+    """home page"""
     return "Hello HBNB!"
 
 
